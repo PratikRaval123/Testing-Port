@@ -1,5 +1,5 @@
 import React from 'react';
-import { SKILLS } from '../constants';
+import { SKILLS } from '@/lib/constants';
 
 const Skills: React.FC = () => {
   const categories = Array.from(new Set(SKILLS.map(s => s.category)));

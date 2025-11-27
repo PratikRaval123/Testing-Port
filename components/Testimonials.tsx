@@ -1,6 +1,6 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
-import { TESTIMONIALS } from '../constants';
+import { TESTIMONIALS } from '@/lib/constants';
 
 const Testimonials: React.FC = () => {
   return (

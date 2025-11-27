@@ -1,11 +1,13 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 
 const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check initial preference
+    // Check initial preference on mount to avoid hydration mismatch
     const isDarkMode = document.documentElement.classList.contains('dark');
     setIsDark(isDarkMode);
   }, []);

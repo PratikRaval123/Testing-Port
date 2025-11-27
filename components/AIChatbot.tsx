@@ -1,7 +1,8 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X, Send, Bot, Loader2 } from 'lucide-react';
-import { sendMessageToGemini } from '../services/gemini';
-import { ChatMessage } from '../types';
+import { ChatMessage } from '@/lib/types';
 
 const AIChatbot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,10 +29,24 @@ const AIChatbot: React.FC = () => {
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
     setIsLoading(true);
 
-    const responseText = await sendMessageToGemini(userMessage);
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: userMessage }),
+      });
 
-    setMessages(prev => [...prev, { role: 'model', text: responseText }]);
-    setIsLoading(false);
+      const data = await response.json();
+      
+      if (data.error) throw new Error(data.error);
+      
+      setMessages(prev => [...prev, { role: 'model', text: data.text }]);
+    } catch (error) {
+      console.error(error);
+      setMessages(prev => [...prev, { role: 'model', text: "Sorry, I'm having trouble connecting right now." }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {

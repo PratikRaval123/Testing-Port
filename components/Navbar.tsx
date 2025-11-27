@@ -1,6 +1,9 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,12 +32,12 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="flex items-center space-x-2 text-stone-900 dark:text-white font-bold text-xl tracking-tighter hover:text-accent transition-colors">
+            <Link href="/" className="flex items-center space-x-2 text-stone-900 dark:text-white font-bold text-xl tracking-tighter hover:text-accent transition-colors">
               <span className="w-8 h-8 bg-accent rounded flex items-center justify-center text-white">
                  <span className="font-serif italic">P</span>
               </span>
               <span>PRATIK<span className="text-accent">.</span></span>
-            </a>
+            </Link>
           </div>
           
           {/* Desktop Menu */}

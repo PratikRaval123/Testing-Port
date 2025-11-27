@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { X, Calendar, Clock, Tag } from 'lucide-react';
-import { BlogPost } from '../types';
+import { BlogPost } from '@/lib/types';
 
 interface BlogModalProps {
   post: BlogPost | null;

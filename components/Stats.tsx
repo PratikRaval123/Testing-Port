@@ -1,5 +1,5 @@
 import React from 'react';
-import { STATS } from '../constants';
+import { STATS } from '@/lib/constants';
 
 const Stats: React.FC = () => {
   return (

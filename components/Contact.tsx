@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Mail, MapPin, Phone, Linkedin, Github } from 'lucide-react';
 

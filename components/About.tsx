@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, Code, Globe, GraduationCap, Languages } from 'lucide-react';
-import { ABOUT_TEXT } from '../constants';
+import { ABOUT_TEXT } from '@/lib/constants';
 
 const About: React.FC = () => {
   return (

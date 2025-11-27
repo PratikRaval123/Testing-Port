@@ -1,7 +1,8 @@
 import React from 'react';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { BLOG_POSTS } from '../constants';
-import { BlogPost } from '../types';
+import { BLOG_POSTS } from '@/lib/constants';
+import { BlogPost } from '@/lib/types';
+import Image from 'next/image';
 
 interface BlogProps {
   onReadMore: (post: BlogPost) => void;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Briefcase, Calendar } from 'lucide-react';
-import { EXPERIENCE } from '../constants';
+import { EXPERIENCE } from '@/lib/constants';
 
 const Experience: React.FC = () => {
   return (

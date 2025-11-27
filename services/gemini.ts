@@ -1,7 +1,7 @@
-import { GoogleGenAI, ChatSession } from "@google/genai";
+import { GoogleGenAI, Chat } from "@google/genai";
 import { SYSTEM_INSTRUCTION } from "../constants";
 
-let chatSession: ChatSession | null = null;
+let chatSession: Chat | null = null;
 
 const getChatSession = () => {
   if (chatSession) return chatSession;

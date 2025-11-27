@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
-import { OWNER_TITLE, OWNER_TAGLINE } from '../constants';
+import { OWNER_TITLE, OWNER_TAGLINE } from '@/lib/constants';
 
 const Hero: React.FC = () => {
   return (
@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
           <div className="flex-1 w-full max-w-md lg:max-w-lg relative animate-fade-in">
              <div className="relative w-full aspect-square rounded-2xl overflow-hidden shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 border-4 border-white dark:border-stone-800 group">
                 <img 
-                  src="../public/Porfile" 
+                  src="./profile.png" 
                   alt="Pratik Raval" 
                   className="object-cover object-top w-full h-full grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
